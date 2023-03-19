@@ -1,0 +1,173 @@
+﻿<Window x:Class="MathGame.HighScoreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MathGame"
+        mc:Ignorable="d"
+        Title="High Scores" Height="595" Width="858" ResizeMode="NoResize">
+    <Grid x:Name="MainGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/stars.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" VerticalContentAlignment="Center" Margin="0,0,0,421" Grid.RowSpan="2" Width="510" FontSize="19">High Scores</Label>
+        <Grid x:Name="ScoresGrid" Grid.Row="1" Background="#A41FA20D" Margin="10,0,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width=".3*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".002*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".02*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height=".2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--#region Set up labels-->
+            <Label Content="Name" Grid.Row="1" Grid.Column="3" Foreground="White"/>
+            <Label Content="Age" Grid.Column="5" HorizontalAlignment="Center" Margin="0,0,0,1" Grid.RowSpan="3" Width="128" Foreground="White"/>
+            <Label Content="Correct Answers" Grid.Row="1" Grid.Column="7" Foreground="White"/>
+            <Label Content="Incorrect Answers" Grid.Row="1" Grid.Column="9" Foreground="White"/>
+            <Label Content="Time" Grid.Row="1" Grid.Column="11" Foreground="White"/>
+            <Label Content="1" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <Label Content="2" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <Label Content="3" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <Label Content="4" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <Label Content="5" Grid.Row="11" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <Label Content="6" Grid.Row="13" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <Label Content="7" Grid.Row="15" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <Label Content="8" Grid.Row="17" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <Label Content="9" Grid.Row="19" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <Label Content="10" Grid.Row="21" Grid.Column="1" HorizontalAlignment="Center" Foreground="White"/>
+            <!--#endregion-->
+            <!--#region Score Labels-->
+            <!--#region Name Labels-->
+            <Label x:Name="NameLabel1" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,24,5" Grid.RowSpan="3" Foreground="White"/>
+            <Label x:Name="NameLabel2" Grid.Row="5" Grid.Column="3" Foreground="White"/>
+            <Label x:Name="NameLabel3" Grid.Row="7" Grid.Column="3" Foreground="White"/>
+            <Label x:Name="NameLabel4" Grid.Row="9" Grid.Column="3" Foreground="White"/>
+            <Label x:Name="NameLabel5" Grid.Row="11" Grid.Column="3" Foreground="White"/>
+            <Label x:Name="NameLabel6" Grid.Row="13" Grid.Column="3" Foreground="White"/>
+            <Label x:Name="NameLabel7" Grid.Row="15" Grid.Column="3" Foreground="White"/>
+            <Label x:Name="NameLabel8" Grid.Row="17" Grid.Column="3" Foreground="White"/>
+            <Label x:Name="NameLabel9" Grid.Row="19" Grid.Column="3" Foreground="White"/>
+            <Label x:Name="NameLabel10" Grid.Row="21" Grid.Column="3" Foreground="White"/>
+            <!--#endregion-->
+            <!--#region Age Labels-->
+            <Label x:Name="AgeLabel1" Grid.Row="3"  Grid.Column="5" Foreground="White"/>
+            <Label x:Name="AgeLabel2" Grid.Row="5"  Grid.Column="5" Foreground="White"/>
+            <Label x:Name="AgeLabel3" Grid.Row="7"  Grid.Column="5" Foreground="White"/>
+            <Label x:Name="AgeLabel4" Grid.Row="9"  Grid.Column="5" Foreground="White"/>
+            <Label x:Name="AgeLabel5" Grid.Row="11" Grid.Column="5" Foreground="White"/>
+            <Label x:Name="AgeLabel6" Grid.Row="13" Grid.Column="5" Foreground="White"/>
+            <Label x:Name="AgeLabel7" Grid.Row="15" Grid.Column="5" Foreground="White"/>
+            <Label x:Name="AgeLabel8" Grid.Row="17" Grid.Column="5" Foreground="White"/>
+            <Label x:Name="AgeLabel9" Grid.Row="19" Grid.Column="5" Foreground="White"/>
+            <Label x:Name="AgeLabel10" Grid.Row="21" Grid.Column="5" Foreground="White"/>
+            <!--#endregion-->
+            <!--#region Correct Answers Labels-->
+            <Label x:Name="CorrectAnswersLabel1" Grid.Row="3"  Grid.Column="7" Foreground="White"/>
+            <Label x:Name="CorrectAnswersLabel2" Grid.Row="5"  Grid.Column="7" Foreground="White"/>
+            <Label x:Name="CorrectAnswersLabel3" Grid.Row="7"  Grid.Column="7" Foreground="White"/>
+            <Label x:Name="CorrectAnswersLabel4" Grid.Row="9"  Grid.Column="7" Foreground="White"/>
+            <Label x:Name="CorrectAnswersLabel5" Grid.Row="11" Grid.Column="7" Foreground="White"/>
+            <Label x:Name="CorrectAnswersLabel6" Grid.Row="13" Grid.Column="7" Foreground="White"/>
+            <Label x:Name="CorrectAnswersLabel7" Grid.Row="15" Grid.Column="7" Foreground="White"/>
+            <Label x:Name="CorrectAnswersLabel8" Grid.Row="17" Grid.Column="7" Foreground="White"/>
+            <Label x:Name="CorrectAnswersLabel9" Grid.Row="19" Grid.Column="7" Foreground="White"/>
+            <Label x:Name="CorrectAnswersLabel10" Grid.Row="21" Grid.Column="7" Foreground="White"/>
+            <!--#endregion-->
+            <!--#region Incorrect Labels-->
+            <Label x:Name="IncorrectAnswersLabel1" Grid.Row="3"  Grid.Column="9" Foreground="White"/>
+            <Label x:Name="IncorrectAnswersLabel2" Grid.Row="5"  Grid.Column="9" Foreground="White"/>
+            <Label x:Name="IncorrectAnswersLabel3" Grid.Row="7"  Grid.Column="9" Foreground="White"/>
+            <Label x:Name="IncorrectAnswersLabel4" Grid.Row="9"  Grid.Column="9" Foreground="White"/>
+            <Label x:Name="IncorrectAnswersLabel5" Grid.Row="11" Grid.Column="9" Foreground="White"/>
+            <Label x:Name="IncorrectAnswersLabel6" Grid.Row="13" Grid.Column="9" Foreground="White"/>
+            <Label x:Name="IncorrectAnswersLabel7" Grid.Row="15" Grid.Column="9" Foreground="White"/>
+            <Label x:Name="IncorrectAnswersLabel8" Grid.Row="17" Grid.Column="9" Foreground="White"/>
+            <Label x:Name="IncorrectAnswersLabel9" Grid.Row="19" Grid.Column="9" Foreground="White"/>
+            <Label x:Name="IncorrectAnswersLabel10" Grid.Row="21" Grid.Column="9" Foreground="White"/>
+            <!--#endregion-->
+            <!--#region Time Labels -->
+            <Label x:Name="TimeLabel1" Grid.Row="3"  Grid.Column="11" Foreground="White"/>
+            <Label x:Name="TimeLabel2" Grid.Row="5"  Grid.Column="11" Foreground="White"/>
+            <Label x:Name="TimeLabel3" Grid.Row="7"  Grid.Column="11" Foreground="White"/>
+            <Label x:Name="TimeLabel4" Grid.Row="9"  Grid.Column="11" Foreground="White"/>
+            <Label x:Name="TimeLabel5" Grid.Row="11" Grid.Column="11" Foreground="White"/>
+            <Label x:Name="TimeLabel6" Grid.Row="13" Grid.Column="11" Foreground="White"/>
+            <Label x:Name="TimeLabel7" Grid.Row="15" Grid.Column="11" Foreground="White"/>
+            <Label x:Name="TimeLabel8" Grid.Row="17" Grid.Column="11" Foreground="White"/>
+            <Label x:Name="TimeLabel9" Grid.Row="19" Grid.Column="11" Foreground="White"/>
+            <Label x:Name="TimeLabel10" Grid.Row="21" Grid.Column="11" Foreground="White"/>
+            <!-- #endregion -->
+            <!--#endregion-->
+        </Grid>
+        <GroupBox x:Name="ScoreGroupBox" Header="Your Score" Grid.Row="2" Foreground="White" Margin="10,0,10,10" Background="#BC4CB9CD">
+            <Grid x:Name="ScoreBoxGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width=".2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width=".2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width=".2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width=".2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width=".2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".5*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="1" Content="Name" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="3" Content="Age" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="5" Content="Correct Answers" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="7" Content="Incorrect Answers" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="9" Content="Time" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+
+                <Label x:Name="CurrentNameLabel" Grid.Row="1" Grid.Column="1" Content="" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label x:Name="CurrentAgeLabel" Grid.Row="1" Grid.Column="3" Content="" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label x:Name="CurrentCorrectLabel" Grid.Row="1" Grid.Column="5" Content="" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label x:Name="CurrentIncorrectLabel" Grid.Row="1" Grid.Column="7" Content="" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                <Label x:Name="CurrentTimeLabel" Grid.Row="1" Grid.Column="9" Content="" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            </Grid>
+
+        </GroupBox>
+    </Grid>
+</Window>
